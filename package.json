@@ -1,0 +1,52 @@
+{
+  "name": "@sigarachi/react-components",
+  "version": "1.0.0",
+  "description": "Base React components lib",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --cache \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "keywords": [
+    "React",
+    "sigarachi",
+    "components"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
+  },
+  "author": "Maksim Dmitriev <sigarachi@yandex.ru>",
+  "license": "ISC",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
